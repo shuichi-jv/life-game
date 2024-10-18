@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LIFE GAME</title>
+<link href="style.css" rel="stylesheet">
+<script src="app.js"></script>
+</head>
+<body>
+<header>
+	<div class="hamburger-menu">
+		<input type="checkbox" id="menu-btn-check" checked>
+		<label for="menu-btn-check" class="menu-btn"><span></span></label>
+		<!--ここからメニュー-->
+		<div class="menu-content">
+			<ul>
+			<li>
+				<div>height</div>
+				<input type="range" name="height" min="10" max="200" step="10" 
+					value="50" id="rngHeight" onchange="setUpView()">
+				<span id="rngHeightValue"></span>
+			</li>
+			<li>
+				<div>width</div>
+				<input type="range" name="width" min="10" max="200" step="10" 
+				value="50" id="rngWidth" onchange="setUpView()">
+				<span id="rngWidthValue"></span>
+			</li>
+			<li>
+				<div>turn</div>
+				<input type="range" name="turn" min="10" max="200" step="10" 
+				value="10" id="rngTurn" onchange="changeTurn()">
+				<span id="rngTurnValue"></span>
+			</li>
+			<li>
+				<div>span</div>
+				<input type="range" name="span" min="50" max="1000" step="50" 
+				value="50" id="rngSpan" onchange="changeSpan()">
+				<span id="rngSpanValue"></span>
+			</li>
+			<li>
+				<div>random</div>
+				<input type="checkbox" id="chckbxRandom" onchange="changeRandom()">
+				<div>density</div>
+				<input type="range" min="0" max="1" step="0.01" value="0.3"
+					id="rngDensity" onchange="changeDensity()">
+				<span id="rngDensityValue"></span>
+			</li>
+			<li>
+				<div>grid</div>
+				<input type="checkbox" id="chckbxGrid" onchange="changeGrid()">
+			</li>
+			</ul>
+		</div>
+	<!--ここまでメニュー-->
+	</div>
+</header>
+<div id="field">
+	
+</div>
+<button onclick="run()">start</button>
+</body>
+</html>
